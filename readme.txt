@@ -73,6 +73,8 @@ Created an external readme that has a brief description of the program.
 Did a final test of the page, all the links are working.
 
 Published the web app to Azure. 
+https://candlesdatabase20211015002018.azurewebsites.net/
+
 Committed the final update to github.
 
 Thank You,
