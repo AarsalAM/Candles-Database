@@ -27,3 +27,7 @@ I tested the CRUD functionality. It works well.
 Was having trouble adding a new about page. I added the view in the "Home" folder, and I set up the link in layout. But it wasn't working.
 	Had to go and add the View method in the HomeController.cs file. 
 I also added a link to the candle database on the navigation bar.
+
+I created a new class called SeedData, and I have added just seed items for various candles so far. I will add the remaining 6 later.
+I edited the program.cs file so that it seeds the database. To do so I also had to add the "using" command for the various directories in the project.
+I tested the project and the seeded files worked.
