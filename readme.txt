@@ -48,3 +48,13 @@ I've added validation elements to the file, such as limiting the user rating to 
 	changing it from decimal to int lead to a database error. I've changed it back to decimal for now. 
 
 Added six more seed items to the database, making a total of 10. The application is now fully functional and needs to be visually changed.
+Added text to the home page. Removed the "Home" from the navigation, as users can click on the website title instead. 
+
+Customization
+--------------
+Created a small logo for my company, Flickr, on photoshop.
+I'm having trouble adding pictures to the project. I have them in a seperate directory, but even though I navigate there correctly they're not loading in.
+	to fix this I moved the images folder to the wwwroot directory.
+I added images to the home page, the about page, and the catalogue page. The images are either too large or too small, and need to be resized. I will do so in the CSS file.
+I'm having trouble manipulating the images through the css file.
+	turns out I wasn't refreshing properly. ctrl+f5 and I can see the changes come into play. 

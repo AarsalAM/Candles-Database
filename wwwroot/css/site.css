@@ -1,10 +1,74 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+* {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif   /*I change the font for the entire page away from the default.*/
+}
+
+.who h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.container {
+    width: 960px;
+    background-color: lightskyblue;
+}
+
 a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
+  display: block;
+}
+
+a:link {
+    color: crimson;
+}
+
+a:visited {
+    color: darkred;
+}
+
+
+li.nav-item {
+    font-size: 22px;
+    font-weight: bold;
+    border: 3px solid black;
+    margin: 5px;
+    font-family: 'Century Gothic';
+}
+
+img.logo {
+    width: 200px;
+    height: auto;
+    border-radius: 65%;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
+    height: auto;
+}
+
+.hq img {
+    margin-left: initial;
+    max-width: 40%;
+}
+
+.homepage {
+    text-align: center;
+    
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 24px;
 }
 
 /* Provide sufficient contrast against white background */
