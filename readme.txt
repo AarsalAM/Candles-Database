@@ -1,4 +1,10 @@
-﻿Created the project as an MVC Web Application. Check marked individual authentication and the usage of HTTPS.
+﻿Name: Aarsal Masoodi - 0688474
+First Created: October 13th, 2021
+
+Last Modified October 15th, 2021
+
+
+Created the project as an MVC Web Application. Check marked individual authentication and the usage of HTTPS.
 My theme for the project is "Candles". Will start following the example tutorial to build the core of the project as I make my changes.
 
 Created a git respositary linked to my school github account. The repositary is currently on "private".
@@ -58,3 +64,17 @@ I'm having trouble adding pictures to the project. I have them in a seperate dir
 I added images to the home page, the about page, and the catalogue page. The images are either too large or too small, and need to be resized. I will do so in the CSS file.
 I'm having trouble manipulating the images through the css file.
 	turns out I wasn't refreshing properly. ctrl+f5 and I can see the changes come into play. 
+I changed the css of the page. I added a blue background, reduced the size of the container, added the logo, and changed the image sizes.
+The page looks much better than the default. 
+The project is almost complete for submission, just need to comment my CSS, upload to azure and create the external readme. 
+
+Finished commenting the CSS. 
+Created an external readme that has a brief description of the program.
+Did a final test of the page, all the links are working.
+
+Published the web app to Azure. 
+Committed the final update to github.
+
+Thank You,
+Aarsal Masoodi
+0688474

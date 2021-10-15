@@ -6,22 +6,22 @@ for details on configuring this project to bundle and minify static web assets. 
 }
 
 .who h1 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /*I select the titles I want to through their classes. In this case I change the h1 on two pages*/
 }
 
-.container {
+.container {        /*I reduce the size of the entire container to make things more pleasant to look at. Also give it a background colour to improve focus*/
     width: 960px;
     background-color: lightskyblue;
 }
 
-a.navbar-brand {
+a.navbar-brand {        /*I initially wanted to change it to be vertical navigation, but was happy with how it looked horizontally.*/
   white-space: normal;
   text-align: center;
   word-break: break-all;
   display: block;
 }
 
-a:link {
+a:link {            /*Change the colour of the links as the default did not work well with my chosen background colour.*/
     color: crimson;
 }
 
@@ -30,7 +30,7 @@ a:visited {
 }
 
 
-li.nav-item {
+li.nav-item {       /*Change the font size and added a border to the navigation items to make them easier to see and click*/
     font-size: 22px;
     font-weight: bold;
     border: 3px solid black;
@@ -38,13 +38,13 @@ li.nav-item {
     font-family: 'Century Gothic';
 }
 
-img.logo {
+img.logo {      /*Instead of a "home" navigation, I used a created company logo. I kept the logo small and rounded out the edges.*/
     width: 200px;
     height: auto;
     border-radius: 65%;
 }
 
-img {
+img {       /*to prevent the images in the pages from being too big, I limited how large they can be and also centered them.*/
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -52,12 +52,12 @@ img {
     height: auto;
 }
 
-.hq img {
+.hq img {       /*I did not want to center this image, so I left aligned it instead. I also reduced it's size.*/
     margin-left: initial;
     max-width: 40%;
 }
 
-.homepage {
+.homepage { /*centered the text on the home page*/
     text-align: center;
     
 }
