@@ -1,37 +1,50 @@
-﻿@model IEnumerable<Candles_Database.Models.Candles>
+﻿@model Candles_Database.Models.CandleTypeViewModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Candle Catalogue";
 }
 
-<h1>Index</h1>
+<h1>Candle Catalogue</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+
+<form asp-controller="Candles" asp-action="Index" method="get">           <!--Added the form to allow users to search-->
+    <p>
+        <select asp-for="CandleType" asp-items="Model.Types">
+            <option value="">ALL</option>
+        </select>
+
+        Title: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Filter" />
+    </p>
+</form>
+
 <table class="table">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                @Html.DisplayNameFor(model => model.Candle[0].Name)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.canType)
+                @Html.DisplayNameFor(model => model.Candle[0].canType)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Colour)
+                @Html.DisplayNameFor(model => model.Candle[0].Colour)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Price)
+                @Html.DisplayNameFor(model => model.Candle[0].Price)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Rating)
+                @Html.DisplayNameFor(model => model.Candle[0].UserRating)   <!--I changed this from just "Rating" to "UserRating"-->
             </th>
+
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.Candle) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
@@ -46,7 +59,7 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Rating)
+                @Html.DisplayFor(modelItem => item.UserRating)      
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

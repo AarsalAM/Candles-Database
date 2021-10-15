@@ -27,7 +27,7 @@ namespace Candles_Database.Models
                         canType = "Molded",
                         Colour = "White",
                         Price = 6.99M,
-                        Rating = 3.5M
+                        UserRating = 3
                     },
 
                     new Candles
@@ -36,7 +36,7 @@ namespace Candles_Database.Models
                         canType = "Molded",
                         Colour = "Red",
                         Price = 14.99M,
-                        Rating = 4.0M
+                        UserRating = 4
                     },
 
                     new Candles
@@ -45,7 +45,7 @@ namespace Candles_Database.Models
                         canType = "Tea Light",
                         Colour = "White",
                         Price = 13.56M,
-                        Rating = 3.0M
+                        UserRating = 3
                     },
 
                     new Candles
@@ -54,7 +54,61 @@ namespace Candles_Database.Models
                         canType = "Votive",
                         Colour = "White",
                         Price = 6.99M,
-                        Rating = 4.2M
+                        UserRating = 4
+                    },
+
+                    new Candles
+                    {
+                        Name = "Red Currant No. 96",
+                        canType = "Votive",
+                        Colour = "Brown",
+                        Price = 45.42M,
+                        UserRating = 5
+                    },
+
+                    new Candles
+                    {
+                        Name = "Unscented Black Wax",
+                        canType = "Votive",
+                        Colour = "Black",
+                        Price = 3.22M,
+                        UserRating = 3
+                    },
+
+                    new Candles
+                    {
+                        Name = "Cathedral Stearine",
+                        canType = "Molded",
+                        Colour = "Off White",
+                        Price = 6.65M,
+                        UserRating = 2
+                    },
+
+                    new Candles
+                    {
+                        Name = "Root Candles 10-Hour",
+                        canType = "Votive",
+                        Colour = "White",
+                        Price = 6.99M,
+                        UserRating = 4
+                    },
+
+                    new Candles
+                    {
+                        Name = "Hello Kitty Balloon Dreams",
+                        canType = "Molded",
+                        Colour = "Pink",
+                        Price = 10.42M,
+                        UserRating = 1
+                    },
+
+                    new Candles
+                    {
+                        Name = "Ikea Sinnlig Scented",
+                        canType = "Tea Light",
+                        Colour = "Green",
+                        Price = 14.09M,
+                        UserRating = 4
                     }
                 ) ;
                 context.SaveChanges();

@@ -31,3 +31,20 @@ I also added a link to the candle database on the navigation bar.
 I created a new class called SeedData, and I have added just seed items for various candles so far. I will add the remaining 6 later.
 I edited the program.cs file so that it seeds the database. To do so I also had to add the "using" command for the various directories in the project.
 I tested the project and the seeded files worked.
+I cleaned up some of the database headings so it looks better to read.
+Added the ability to search through the database through the candle name.
+Added a new class in the models folder to allow the ability to search the candles by type.
+
+deleted the Hello World files and folders added for the tutorial. 
+After adding the code to allow search by genre, I've hit an error:
+"InvalidOperationException: The model item passed into the ViewDataDictionary is of type 'System.Collections.Generic.List`1[Candles_Database.Models.Candles]', but this ViewDataDictionary instance requires a model item of type 'Candles_Database.Models.CandleTypeViewModel'."
+Troubleshooting now.
+Okay, fixed it. I had an error on my return View in the CandlesController.cs file.
+
+Now I need to add a user rating category. So instead of adding a new field, I'm editing the previous "rating" field I had to become a user rating instead. 
+Updated the "About Us" page with all the relevent data, as well as putting the fields in respective divs. 
+Now going to finish up the tutorial aspect with Validation, and will then focus on customizing the page.
+I've added validation elements to the file, such as limiting the user rating to between 1 and 5. I also changed it from decimal, to int.
+	changing it from decimal to int lead to a database error. I've changed it back to decimal for now. 
+
+Added six more seed items to the database, making a total of 10. The application is now fully functional and needs to be visually changed.

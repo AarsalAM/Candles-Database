@@ -20,9 +20,32 @@ namespace Candles_Database.Controllers
         }
 
         // GET: Candles
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string candleType, string searchString)     //I update the index to add the ability to search through the database.
         {
-            return View(await _context.Candles.ToListAsync());
+            IQueryable<string> typeQuery = from m in _context.Candles
+                                            orderby m.canType
+                                            select m.canType;
+
+            var candle = from m in _context.Candles
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                candle = candle.Where(s => s.Name.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(candleType))              //Add the ability to search by the candle type as well
+            {
+                candle = candle.Where(x => x.canType == candleType);
+            }
+
+            var candleTypeVM = new CandleTypeViewModel
+            {
+                Types = new SelectList(await typeQuery.Distinct().ToListAsync()),
+                Candle = await candle.ToListAsync()
+            };
+
+            return View(candleTypeVM);
         }
 
         // GET: Candles/Details/5
@@ -54,7 +77,7 @@ namespace Candles_Database.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,canType,Colour,Price,Rating")] Candles candles)
+        public async Task<IActionResult> Create([Bind("Id,Name,canType,Colour,Price,Rating,UserRating")] Candles candles)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +109,7 @@ namespace Candles_Database.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,canType,Colour,Price,Rating")] Candles candles)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,canType,Colour,Price,UserRating")] Candles candles)
         {
             if (id != candles.Id)
             {

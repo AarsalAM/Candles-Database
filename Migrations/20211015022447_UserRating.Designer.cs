@@ -3,14 +3,16 @@ using Candles_Database.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Candles_Database.Migrations
 {
     [DbContext(typeof(Candles_DatabaseContext))]
-    partial class Candles_DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20211015022447_UserRating")]
+    partial class UserRating
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
